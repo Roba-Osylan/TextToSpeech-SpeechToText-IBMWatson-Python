@@ -13,7 +13,7 @@ The code used in this program is written by Necholas Renotte and it is licensed 
 see: https://github.com/nicknochnack/RealTimeSpeechToText). 
 
 The only file needs to be modified according to the service credentials of our speech to text service is the speech.cfg file. The Figure below shows the modified version of the file where the API key and the region are specified to be used later on the program transcribe.py. The program converts a live speech to a text within a 5 seconds period (may be changed by the command –t  time(seconds)).
-![speech cfg](https://user-images.githubusercontent.com/85955049/127395453-d70bbae4-fbd3-43e7-871f-d90e62d6ed32.png)
+![speech cfg](https://user-images.githubusercontent.com/85955049/127396693-ba202651-4303-479b-bcb9-9b41526262e3.png)
 
 
 **Results**
