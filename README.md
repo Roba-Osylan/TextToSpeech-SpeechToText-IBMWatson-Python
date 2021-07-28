@@ -13,8 +13,7 @@ The code used in this program is written by Necholas Renotte and it is licensed 
 see: https://github.com/nicknochnack/RealTimeSpeechToText). 
 
 The only file needs to be modified according to the service credentials of our speech to text service is the speech.cfg file. The Figure below shows the modified version of the file where the API key and the region are specified to be used later on the program transcribe.py. The program converts a live speech to a text within a 5 seconds period (may be changed by the command –t  time(seconds)).
-![speech cfg](https://user-images.githubusercontent.com/85955049/127396693-ba202651-4303-479b-bcb9-9b41526262e3.png)
-
+![speechcfg](https://user-images.githubusercontent.com/85955049/127397823-343210fe-f91a-4ef6-9795-ff644982bb5b.png)
 
 **Results**
 
@@ -28,7 +27,7 @@ Through this section, IBM Watson’s Text to Speech service will be introduced. 
 **Code**
 
 The Figure below shows the program that converts a text to a speech. 
-![TTS Program](https://user-images.githubusercontent.com/85955049/127396163-1ea207a7-d974-41e7-9b0c-2e00834a6cbf.png)
+![ttsprogram](https://user-images.githubusercontent.com/85955049/127397939-62091b8c-a829-4ac5-94fc-97c8d3477b83.png)
 
 The first and the most important step is indicated to install the dependency “ibm_watson” to be able to access the service. The second step is to create two variables, one for the API key and the other for the URL and paste their values from the service credentials. The third step is to import the text to speech service from the dependency and to import the IAM authenticator which is used in the following step to request the service using the API key. The next two steps are to create a new TTS using the imported TextToSpeech service and then to set the service’s URL. Finally, the last three rows are indicated to convert the text to an audio as an .mp3 file. To clarify, the first row creates an .mp3 file with the name “TTS Output-Greeting” as an audio_file. Then the .synthesize function is used to synthesizes the text to an audio that is spoken in the specified voice and format “en-US_AllisonV3Voice” as well as the .get_result() to get the HTTP response of the service request and then the result is stored in the variable res. Finally, the .content function is used to fetch the content from the stored data in the variable res and .write the audio file.
 
